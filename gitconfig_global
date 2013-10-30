@@ -1,0 +1,56 @@
+[advice]
+  pushNonFastForward = false
+  statusHints = false
+[alias]
+  br = branch
+  ci = commit
+  cm = commit -m
+  co = checkout
+  st = status
+  up = fetch
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+
+  # Legit shortcuts
+  branches = !legit branches
+  graft = !legit graft \"$@\"
+  harvest = !legit harvest \"$@\"
+  publish = !legit publish \"$@\"
+  sprout = !legit sprout \"$@\"
+  switch = !legit switch \"$@\"
+  sync = !legit sync \"$@\"
+  unpublish = !legit unpublish \"$@\"
+[core]
+  autocrlf = false
+  editor = vim
+  excludesfile = ~/.gitignore
+  quotepath = false
+  whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+[color]
+  branch = true
+  diff = true
+  interactive = true
+  status = true
+  ui = true
+[credential]
+  helper = osxkeychain
+[diff]
+#  mnemonicprefix = true
+[format]
+  signoff = true
+[github]
+	user = iwalid
+[i18n]
+  commitEncoding = utf-8
+  logOutputEncoding = utf-8
+[include]
+  path = .gitpersonal
+[merge]
+  stat = true
+  tool = vimdiff
+[push]
+  default = simple
+[rerere]
+  enabled = true
+[user]
+  name = Walid Iguer
+  email = walid.iguer@gmail.com
